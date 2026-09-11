@@ -19,7 +19,7 @@ export default function Navbar({ onOpenBooking }) {
   }, []);
 
   const navLinks = [
-    { label: "My Story", href: "#my-story", isRoute: false },
+    { label: "My Story", href: "/my-story", isRoute: true },
     { label: "Speaking (B2B)", href: "/speaking", isRoute: true },
     { label: "1TO1", href: "/1to1", isRoute: true },
     { label: "Results", href: "#results", isRoute: false },

@@ -12,12 +12,15 @@ import BookingFunnelSection from "./components/BookingFunnelSection";
 import PaymentConfirmationModal from "./components/PaymentConfirmationModal";
 import B2BEnquiryModal from "./components/B2BEnquiryModal";
 import Footer from "./components/Footer";
+import { useScrollReveal } from "./hooks/useScrollReveal";
 
 // Dedicated Page Routes
 import SpeakingPage from "./pages/SpeakingPage";
 import OneToOnePage from "./pages/OneToOnePage";
+import MyStoryPage from "./pages/MyStoryPage";
 
 export default function App() {
+  useScrollReveal();
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
   const [selectedProgram, setSelectedProgram] = useState(null);
   const [b2bModalOpen, setB2bModalOpen] = useState(false);
@@ -83,7 +86,12 @@ export default function App() {
     );
   }
 
-  // Route 3: Homepage (Default Route '/')
+  // Route 3: /my-story (Full Transformation Journey Dedicated Page)
+  if (currentPath === "/my-story") {
+    return <MyStoryPage onOpenBooking={(prog) => handleOpenBooking(prog)} />;
+  }
+
+  // Route 4: Homepage (Default Route '/')
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "var(--bg-dark)", color: "var(--text-primary)" }}>
       {/* Sticky Glass Navbar */}

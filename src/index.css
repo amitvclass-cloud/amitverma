@@ -256,6 +256,25 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--accent-gold);
 }
 
+/* Scroll-reveal animation — mobile-friendly (GPU-accelerated opacity/transform only,
+   respects prefers-reduced-motion). Toggled via .in-view by useScrollReveal(). */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* Section Header Shared Styles */
 .section-tag {
   color: var(--accent-gold);

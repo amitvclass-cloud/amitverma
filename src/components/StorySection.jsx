@@ -1,39 +1,14 @@
 import React from "react";
 import { personalStory } from "../data/transformations";
-import { ArrowRight, Check, Sparkles, Scale, Briefcase, HeartHandshake, Image as ImageIcon, UserCheck, Award, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Image as ImageIcon, UserCheck, CheckCircle2, BookOpen } from "lucide-react";
+
+const goToMyStory = () => {
+  window.history.pushState({}, "", "/my-story");
+  window.dispatchEvent(new Event("popstate"));
+  window.scrollTo(0, 0);
+};
 
 export default function StorySection({ onOpenBooking }) {
-  const timelineSteps = [
-    {
-      year: "2002 - 2022",
-      title: "20+ Years Corporate MNC Tech Leader",
-      desc: "Managing high-pressure engineering projects, leading large technical teams, and scaling 500+ business processes — but burning out at 110kg.",
-      icon: Briefcase,
-      highlight: "110 kg Peak Weight"
-    },
-    {
-      year: "The Awakening",
-      title: "Health Warning & Mindset Shift",
-      desc: "Realizing that corporate success without physical vitality is empty. Decided to apply engineering discipline to human health and habits.",
-      icon: Scale,
-      highlight: "Radhe Radhe Alignment"
-    },
-    {
-      year: "The Breakthrough",
-      title: "Lost 30kg Without Gym",
-      desc: "Engineered a sustainable home nutrition blueprint, daily movement habit stacks, and mental strength framework. Weight dropped from 110kg → 80kg.",
-      icon: Sparkles,
-      highlight: "-30 kg Fat Loss"
-    },
-    {
-      year: "Present Day",
-      title: "Fitness & Life Transformation Coach",
-      desc: "Now empowering corporate leaders, entrepreneurs, and busy professionals to shed fat, boost energy, and unlock peak life performance.",
-      icon: HeartHandshake,
-      highlight: "500+ Lives Impacted"
-    }
-  ];
-
   return (
     <section id="my-story" className="section-padding" style={{ position: "relative", background: "var(--bg-panel)" }}>
       <div className="container">
@@ -51,7 +26,7 @@ export default function StorySection({ onOpenBooking }) {
 
         {/* Story Layout: Single Para Text Card + Real Person Card on Left, Image Placeholder Card on Right */}
         <div
-          className="story-grid-container"
+          className="story-grid-container reveal"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
@@ -271,78 +246,15 @@ export default function StorySection({ onOpenBooking }) {
 
         </div>
 
-        {/* Timeline Journey Cards */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-            gap: "1.5rem",
-            marginBottom: "3.5rem"
-          }}
-        >
-          {timelineSteps.map((step, idx) => {
-            const IconComponent = step.icon;
-            return (
-              <div
-                key={idx}
-                className="glass-card"
-                style={{
-                  padding: "1.5rem",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between"
-                }}
-              >
-                <div>
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1rem" }}>
-                    <span style={{ fontSize: "0.8rem", color: "var(--accent-gold)", fontWeight: "700" }}>
-                      {step.year}
-                    </span>
-                    <div
-                      style={{
-                        width: "36px",
-                        height: "36px",
-                        borderRadius: "50%",
-                        background: "rgba(255, 122, 0, 0.15)",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center"
-                      }}
-                    >
-                      <IconComponent size={18} color="var(--accent-orange)" />
-                    </div>
-                  </div>
-
-                  <h4 style={{ fontSize: "1.1rem", marginBottom: "0.6rem", color: "#F5F5F5" }}>
-                    {step.title}
-                  </h4>
-                  <p className="timeline-desc" style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: "1.5" }}>
-                    {step.desc}
-                  </p>
-                </div>
-
-                <div
-                  style={{
-                    marginTop: "1.25rem",
-                    paddingTop: "0.75rem",
-                    borderTop: "1px solid rgba(255,255,255,0.06)",
-                    fontSize: "0.75rem",
-                    fontWeight: "700",
-                    color: "var(--accent-gold)",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "0.4rem"
-                  }}
-                >
-                  <Sparkles size={12} /> {step.highlight}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
         {/* Soft CTA transition into Services */}
-        <div style={{ textAlign: "center" }}>
+        <div style={{ textAlign: "center", display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>
+          <button
+            onClick={goToMyStory}
+            className="btn btn-secondary"
+            style={{ padding: "0.9rem 2rem", fontSize: "0.95rem" }}
+          >
+            <BookOpen size={18} /> Read My Full Journey (2002 → Now)
+          </button>
           <button
             onClick={onOpenBooking}
             className="btn btn-primary"
@@ -366,9 +278,6 @@ export default function StorySection({ onOpenBooking }) {
           }
           .story-text-cell {
             order: 1 !important; /* Left elements come after image on mobile */
-          }
-          .timeline-desc {
-            display: none !important; /* Hide description paragraph in cards on mobile */
           }
         }
       `}</style>

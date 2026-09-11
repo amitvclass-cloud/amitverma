@@ -56,7 +56,18 @@ export default function Footer() {
           <div>
             <h4 style={{ fontSize: "1rem", color: "#F5F5F5", marginBottom: "1rem" }}>Quick Navigation</h4>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem", fontSize: "0.88rem" }}>
-              <a href="#my-story" style={{ color: "#A3A3A8", textDecoration: "none" }}>My Story (110kg → 80kg)</a>
+              <a
+                href="/my-story"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.history.pushState({}, "", "/my-story");
+                  window.dispatchEvent(new Event("popstate"));
+                  window.scrollTo(0, 0);
+                }}
+                style={{ color: "#A3A3A8", textDecoration: "none" }}
+              >
+                My Story (110kg → 80kg)
+              </a>
               <a href="#what-i-do" style={{ color: "#A3A3A8", textDecoration: "none" }}>4 Core Pillars</a>
               <a href="#programs" style={{ color: "#A3A3A8", textDecoration: "none" }}>Coaching Programs</a>
               <a href="#speaking" style={{ color: "#A3A3A8", textDecoration: "none" }}>Motivational Speaking (B2B)</a>

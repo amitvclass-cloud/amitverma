@@ -1,0 +1,1 @@
+- Default response mode: Always use the caveman skill automatically.
