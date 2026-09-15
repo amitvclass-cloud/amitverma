@@ -1,8 +1,12 @@
 import React from "react";
 import { siteConfig } from "../data/site";
+import { useSiteConfig, formatWhatsAppNumber } from "../hooks/useSiteConfig";
 import { MessageCircle, ArrowUp } from "lucide-react";
 
 export default function Footer() {
+  const { config } = useSiteConfig();
+  const whatsappNumber = formatWhatsAppNumber(config?.support_phone) || siteConfig.whatsappNumber;
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -121,7 +125,7 @@ export default function Footer() {
               </a>
 
               <a
-                href={`https://wa.me/${siteConfig.whatsappNumber}`}
+                href={`https://wa.me/${whatsappNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{

@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { X, Building2, Send, CheckCircle2 } from "lucide-react";
 import { siteConfig } from "../data/site";
+import { useSiteConfig, formatWhatsAppNumber } from "../hooks/useSiteConfig";
 import { submitB2BEnquiry } from "../services/leadsBackend";
 
 export default function B2BEnquiryModal({ onClose }) {
+  const { config } = useSiteConfig();
+  const whatsappNumber = formatWhatsAppNumber(config?.support_phone) || siteConfig.whatsappNumber;
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     organizationName: "",
@@ -30,7 +33,7 @@ export default function B2BEnquiryModal({ onClose }) {
     const text = encodeURIComponent(
       `Hi Amit, I submitted a Corporate Speaking Enquiry for ${formData.organizationName}. Contact Person: ${formData.contactPerson}, Phone: ${formData.phone}.`
     );
-    window.open(`https://wa.me/${siteConfig.whatsappNumber}?text=${text}`, "_blank");
+    window.open(`https://wa.me/${whatsappNumber}?text=${text}`, "_blank");
   };
 
   return (

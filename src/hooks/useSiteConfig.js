@@ -47,6 +47,14 @@ async function fetchConfig(force) {
   }
 }
 
+// Sheet stores a plain 10-digit number (e.g. "9876543210") — wa.me needs country code.
+export function formatWhatsAppNumber(supportPhone) {
+  if (!supportPhone) return null;
+  const digits = String(supportPhone).replace(/\D/g, "");
+  if (!digits) return null;
+  return digits.startsWith("91") ? digits : `91${digits}`;
+}
+
 export function useSiteConfig() {
   const [config, setConfig] = useState(memCache?.data || readStored());
 

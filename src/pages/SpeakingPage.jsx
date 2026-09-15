@@ -4,14 +4,17 @@ import MotivationalSpeakingSection from "../components/MotivationalSpeakingSecti
 import B2BEnquiryModal from "../components/B2BEnquiryModal";
 import Footer from "../components/Footer";
 import { siteConfig } from "../data/site";
+import { useSiteConfig, formatWhatsAppNumber } from "../hooks/useSiteConfig";
 import { Building2, Award, Users, ArrowRight, MessageCircle } from "lucide-react";
 
 export default function SpeakingPage({ onOpenBooking }) {
   const [b2bModalOpen, setB2bModalOpen] = useState(false);
+  const { config } = useSiteConfig();
+  const whatsappNumber = formatWhatsAppNumber(config?.support_phone) || siteConfig.whatsappNumber;
 
   const openWhatsAppB2B = () => {
     const message = encodeURIComponent("Hi Amit, I would like to inquire about booking you for a Corporate/Event Motivational Keynote.");
-    window.open(`https://wa.me/${siteConfig.whatsappNumber}?text=${message}`, "_blank");
+    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
   };
 
   return (

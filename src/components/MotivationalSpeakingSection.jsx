@@ -1,12 +1,16 @@
 import React from "react";
 import { speakingData } from "../data/speaking";
 import { siteConfig } from "../data/site";
+import { useSiteConfig, formatWhatsAppNumber } from "../hooks/useSiteConfig";
 import { MessageCircle, Calendar, Award, Building2, CheckCircle2, ArrowRight } from "lucide-react";
 
 export default function MotivationalSpeakingSection({ onOpenB2BModal }) {
+  const { config } = useSiteConfig();
+  const whatsappNumber = formatWhatsAppNumber(config?.support_phone) || siteConfig.whatsappNumber;
+
   const openWhatsAppB2B = () => {
     const message = encodeURIComponent("Hi Amit, I would like to inquire about booking you for a Corporate/Event Motivational Keynote.");
-    window.open(`https://wa.me/${siteConfig.whatsappNumber}?text=${message}`, "_blank");
+    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
   };
 
   return (
