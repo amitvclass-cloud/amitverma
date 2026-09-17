@@ -21,11 +21,16 @@ export default function MotivationalSpeakingSection({ onOpenB2BModal }) {
         <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
           <span className="section-tag">{speakingData.header.tag}</span>
           <h2 className="section-title">
-            Motivational Speaking & <span className="text-gradient">Corporate Keynotes</span>
+            Corporate Training & <span className="text-gradient">Consulting</span>
           </h2>
           <p className="section-subtitle">
             {speakingData.header.subtitle}
           </p>
+          <div className="b2b-proof-points">
+            {speakingData.header.proofPoints.map((point) => (
+              <span key={point}><CheckCircle2 size={14} /> {point}</span>
+            ))}
+          </div>
         </div>
 
         {/* B2B Stats Counter Row */}
@@ -53,14 +58,7 @@ export default function MotivationalSpeakingSection({ onOpenB2BModal }) {
         </div>
 
         {/* Keynote Topics Grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: "2rem",
-            marginBottom: "3.5rem"
-          }}
-        >
+        <div className="b2b-topic-grid">
           {speakingData.topics.map((topic) => (
             <div
               key={topic.id}
@@ -135,10 +133,10 @@ export default function MotivationalSpeakingSection({ onOpenB2BModal }) {
         >
           <Building2 size={40} color="var(--accent-gold)" style={{ marginBottom: "1rem" }} />
           <h3 style={{ fontSize: "1.6rem", color: "#F5F5F5", marginBottom: "0.5rem" }}>
-            Planning a Corporate Event, Summit, or Campus Workshop?
+            Ready to Identify Where Your Company Is Losing Money — and Fix It?
           </h3>
           <p style={{ color: "var(--text-secondary)", fontSize: "0.95rem", maxWidth: "600px", margin: "0 auto 2rem auto" }}>
-            Connect directly with Amit Verma's event management team for customized keynote proposals, speaker fees, and availability.
+            Available at national and international level, in-person or virtual. Connect directly with Amit Verma for customized training proposals, fees, and availability.
           </p>
 
           <div
@@ -162,8 +160,17 @@ export default function MotivationalSpeakingSection({ onOpenB2BModal }) {
               className="btn btn-gold"
               style={{ padding: "0.9rem 2rem", fontSize: "0.95rem" }}
             >
-              <Calendar size={20} /> Request Event Proposal
+              <Calendar size={20} /> Request Training Proposal
             </button>
+
+            <a
+              href="/Amit-Verma-Corporate-Training-Brochure.pdf"
+              download
+              className="btn btn-secondary"
+              style={{ padding: "0.9rem 2rem", fontSize: "0.95rem" }}
+            >
+              Download Brochure PDF
+            </a>
           </div>
         </div>
 

@@ -33,6 +33,7 @@ export const oneToOneProgram = {
     "Weekly 1-on-1 Progress & Habit Audits directly with Amit Verma",
     "Corporate Stress Management, Energy Peak & Sleep Optimization Protocols",
     "Direct 24/7 Priority WhatsApp Access & Meal Tweaks",
+    "The same discipline Amit used to cut costs & build teams across 21+ years in MNC roles — applied to your own body",
     "Lifetime Access to Masterclass Vault, Diet Trackers & Discipline Worksheets"
   ],
   originalPrice: "₹24,999",

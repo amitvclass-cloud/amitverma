@@ -1,6 +1,6 @@
 import React from "react";
 import { personalStory } from "../data/transformations";
-import { ArrowRight, Image as ImageIcon, UserCheck, CheckCircle2, BookOpen } from "lucide-react";
+import { ArrowRight, Image as ImageIcon, UserCheck, CheckCircle2, BookOpen, Sparkles } from "lucide-react";
 
 const goToMyStory = () => {
   window.history.pushState({}, "", "/my-story");
@@ -38,22 +38,46 @@ export default function StorySection({ onOpenBooking }) {
           {/* Left Stack: Narrative Text Card + Real Person Card */}
           <div className="story-text-cell" style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
             
-            {/* Single Paragraph Story Card */}
-            <div className="glass-card" style={{ padding: "2rem" }}>
+            {/* Scannable story card */}
+            <div className="glass-card story-summary-card" style={{ padding: "2rem" }}>
               <h3 style={{ fontSize: "1.4rem", color: "var(--accent-gold)", marginBottom: "1rem" }}>
                 {personalStory.title}
               </h3>
               
-              <p
-                style={{
-                  color: "var(--text-secondary)",
-                  fontSize: "0.95rem",
-                  lineHeight: "1.7",
-                  marginBottom: "1.25rem"
-                }}
-              >
-                {personalStory.narrative[0]}
-              </p>
+              <p className="story-intro">{personalStory.narrative[0]}</p>
+
+              <div className="story-highlights">
+                {personalStory.highlights.map((item) => (
+                  <div className="story-highlight" key={item.label}>
+                    <Sparkles size={15} color="var(--accent-orange)" />
+                    <div>
+                      <span>{item.label}</span>
+                      <strong>{item.value}</strong>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginBottom: "1.25rem" }}>
+                {personalStory.companies.map((c) => (
+                  <span
+                    key={c}
+                    style={{
+                      fontSize: "0.72rem",
+                      fontWeight: "700",
+                      color: "var(--accent-gold)",
+                      border: "1px solid rgba(212, 175, 55, 0.4)",
+                      background: "rgba(212, 175, 55, 0.08)",
+                      padding: "0.3rem 0.7rem",
+                      borderRadius: "var(--radius-pill)"
+                    }}
+                  >
+                    {c}
+                  </span>
+                ))}
+              </div>
+
+              <p className="company-disclaimer">{personalStory.companyDisclaimer}</p>
 
               <div
                 style={{
@@ -279,6 +303,9 @@ export default function StorySection({ onOpenBooking }) {
           .story-text-cell {
             order: 1 !important; /* Left elements come after image on mobile */
           }
+          .story-summary-card { padding: 1.35rem !important; }
+          .story-intro { font-size: 0.85rem !important; line-height: 1.55 !important; }
+          .story-highlights { grid-template-columns: 1fr !important; gap: 0.55rem !important; }
         }
       `}</style>
     </section>

@@ -5,7 +5,7 @@ import B2BEnquiryModal from "../components/B2BEnquiryModal";
 import Footer from "../components/Footer";
 import { siteConfig } from "../data/site";
 import { useSiteConfig, formatWhatsAppNumber } from "../hooks/useSiteConfig";
-import { Building2, Award, Users, ArrowRight, MessageCircle } from "lucide-react";
+import { Building2, Award, Users, ArrowRight, MessageCircle, CheckCircle2 } from "lucide-react";
 
 export default function SpeakingPage({ onOpenBooking }) {
   const [b2bModalOpen, setB2bModalOpen] = useState(false);
@@ -43,32 +43,26 @@ export default function SpeakingPage({ onOpenBooking }) {
             }}
           >
             <Building2 size={16} color="var(--accent-gold)" />
-            <span>CORPORATE & B2B KEYNOTES</span>
+            <span>CORPORATE TRAINING & CONSULTING</span>
           </div>
 
           <h1
             style={{
-              fontSize: "clamp(2.4rem, 4vw, 3.8rem)",
+              fontSize: "clamp(1.9rem, 6vw, 3.8rem)",
               fontWeight: "800",
-              lineHeight: "1.15",
+              lineHeight: "1.2",
               margin: "0 0 1.25rem 0"
             }}
           >
-            Transform Your Corporate Culture with <br />
-            <span className="text-gradient">High-Impact Motivational Keynotes</span>
+            Cost Saving, Vendor Development & <br />
+            <span className="text-gradient">Team Building — From the Factory Floor</span>
           </h1>
 
-          <p
-            style={{
-              fontSize: "var(--fz-md)",
-              color: "var(--text-secondary)",
-              maxWidth: "750px",
-              margin: "0 auto 2.5rem auto",
-              lineHeight: "1.6"
-            }}
-          >
-            Delivering powerful engineering-backed wellness, stress reduction, and peak performance frameworks to corporate leaders, tech teams, and annual summits nationwide.
-          </p>
+          <div className="speaking-hero-proof">
+            <span><CheckCircle2 size={15} /> 21+ years of MNC leadership</span>
+            <span><CheckCircle2 size={15} /> Engineer → Group Manager</span>
+            <span><CheckCircle2 size={15} /> Tested on real floors & teams</span>
+          </div>
 
           <div style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}>
             <button

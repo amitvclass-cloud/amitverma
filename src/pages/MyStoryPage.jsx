@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { personalStory } from "../data/transformations";
 import { timelineSteps } from "../data/timeline";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, CheckCircle2 } from "lucide-react";
 
 export default function MyStoryPage({ onOpenBooking }) {
   return (
@@ -25,9 +25,33 @@ export default function MyStoryPage({ onOpenBooking }) {
           <h1 className="section-title" style={{ maxWidth: "800px", margin: "0 auto 1rem" }}>
             {personalStory.subtitle}
           </h1>
-          <p className="section-subtitle" style={{ maxWidth: "680px", margin: "0 auto" }}>
-            {personalStory.narrative[0]}
-          </p>
+          <p className="section-subtitle" style={{ maxWidth: "680px", margin: "0 auto" }}>{personalStory.narrative[0]}</p>
+          <div className="story-page-proof">
+            {personalStory.highlights.map((item) => (
+              <div key={item.label} className="story-page-proof-item">
+                <CheckCircle2 size={15} /> <span>{item.value}</span>
+              </div>
+            ))}
+          </div>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", justifyContent: "center", marginTop: "1.25rem" }}>
+            {personalStory.companies.map((c) => (
+              <span
+                key={c}
+                style={{
+                  fontSize: "0.72rem",
+                  fontWeight: "700",
+                  color: "var(--accent-gold)",
+                  border: "1px solid rgba(212, 175, 55, 0.4)",
+                  background: "rgba(212, 175, 55, 0.08)",
+                  padding: "0.3rem 0.7rem",
+                  borderRadius: "var(--radius-pill)"
+                }}
+              >
+                {c}
+              </span>
+            ))}
+          </div>
+          <p className="company-disclaimer story-page-disclaimer">{personalStory.companyDisclaimer}</p>
         </div>
       </section>
 
@@ -117,6 +141,25 @@ export default function MyStoryPage({ onOpenBooking }) {
         .story-timeline-card {
           flex: 1;
           padding: 1.5rem 1.75rem;
+        }
+        .story-page-proof {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 0.6rem;
+          margin: 1.25rem auto 0;
+        }
+        .story-page-proof-item {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          color: var(--accent-gold);
+          background: rgba(212, 175, 55, 0.08);
+          border: 1px solid rgba(212, 175, 55, 0.25);
+          border-radius: var(--radius-pill);
+          padding: 0.4rem 0.75rem;
+          font-size: 0.78rem;
+          font-weight: 700;
         }
         @media (min-width: 900px) {
           .story-timeline-row:nth-child(even) {

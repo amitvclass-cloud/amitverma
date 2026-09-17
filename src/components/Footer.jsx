@@ -1,5 +1,6 @@
 import React from "react";
 import { siteConfig } from "../data/site";
+import { personalStory } from "../data/transformations";
 import { useSiteConfig, formatWhatsAppNumber } from "../hooks/useSiteConfig";
 import { MessageCircle, ArrowUp } from "lucide-react";
 
@@ -154,7 +155,7 @@ export default function Footer() {
           <div>
             <h4 style={{ fontSize: "1rem", color: "#F5F5F5", marginBottom: "1rem" }}>Disclaimer</h4>
             <p style={{ fontSize: "0.75rem", color: "var(--text-muted)", lineHeight: "1.5" }}>
-              Disclaimer: Results may vary based on individual consistency, metabolic state, and effort. Amit Verma provides life coaching and fitness guidance based on personal experience and habit engineering principles. Consult your physician before beginning any workout or diet regimen.
+              Disclaimer: Results may vary based on individual consistency, metabolic state, and effort. Amit Verma provides life coaching and fitness guidance based on personal experience and habit engineering principles. Consult your physician before beginning any workout or diet regimen. {personalStory.companyDisclaimer}
             </p>
           </div>
         </div>

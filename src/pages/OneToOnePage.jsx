@@ -25,6 +25,14 @@ export default function OneToOnePage({ onOpenBooking }) {
     {
       title: "24/7 Priority WhatsApp Support",
       desc: "Real-time meal tweaks, restaurant ordering assistance, and daily mindset accountability."
+    },
+    {
+      title: "Travel, Dining & Social-Life Strategy",
+      desc: "Simple decision rules for work trips, client dinners, family events, and restaurant meals—without starting over on Monday."
+    },
+    {
+      title: "Sleep, Stress & Energy Reset",
+      desc: "Practical routines to protect sleep, manage stress eating, and maintain steady energy through demanding workdays."
     }
   ];
 
@@ -102,14 +110,7 @@ export default function OneToOnePage({ onOpenBooking }) {
             </h2>
           </div>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-              gap: "2rem",
-              marginBottom: "4rem"
-            }}
-          >
+          <div className="one-to-one-feature-grid">
             {features.map((item, idx) => (
               <div
                 key={idx}
@@ -151,6 +152,11 @@ export default function OneToOnePage({ onOpenBooking }) {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="one-to-one-fit-note">
+            <Clock size={18} />
+            <span><strong>Designed for real schedules:</strong> office deadlines, travel, family commitments, and long workdays.</span>
           </div>
 
           {/* Pricing Box */}
