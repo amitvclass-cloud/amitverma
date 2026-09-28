@@ -12,9 +12,9 @@ export const siteConfig = {
   
   bioStats: [
     { label: "Weight Loss", value: "30 kg", desc: "110kg → 80kg without gym" },
-    { label: "MNC Experience", value: "20+ Yrs", desc: "Ex-Corporate Tech Leader" },
+    { label: "Experience", value: "21+ Years", desc: "In Manufacturing Industries" },
     { label: "Businesses Scaled", value: "500+", desc: "Mentored & Scaled" },
-    { label: "Instagram Family", value: "11.6K+", desc: "Engaged Community" },
+    { label: "Instagram Family", value: "12.9K+", desc: "Engaged Community" },
   ],
 
   hero: {

@@ -86,7 +86,7 @@ export default function InstagramSection() {
           <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
             <div style={{ textAlign: "right" }}>
               <div style={{ fontSize: "1.5rem", fontWeight: "800", color: "#FFB800", fontFamily: "var(--font-heading)" }}>
-                11.6K+
+                12.9K+
               </div>
               <div style={{ fontSize: "0.75rem", color: "var(--text-secondary)" }}>
                 Active Instagram Followers

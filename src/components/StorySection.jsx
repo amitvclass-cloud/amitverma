@@ -158,11 +158,11 @@ export default function StorySection({ onOpenBooking }) {
 
           </div>
 
-          {/* Right Column: Image Placeholder Card */}
+          {/* Right Column: Profile Photo Card */}
           <div
             className="glass-card story-image-cell"
             style={{
-              padding: "1.5rem",
+              padding: "1rem",
               borderRadius: "24px",
               border: "1px solid rgba(212, 175, 55, 0.4)",
               boxShadow: "0 0 30px rgba(212, 175, 55, 0.15)",
@@ -172,6 +172,7 @@ export default function StorySection({ onOpenBooking }) {
               justifyContent: "center",
               textAlign: "center",
               position: "relative",
+              overflow: "hidden",
               minHeight: "380px"
             }}
           >
@@ -179,8 +180,8 @@ export default function StorySection({ onOpenBooking }) {
             <div
               style={{
                 position: "absolute",
-                top: "14px",
-                right: "14px",
+                top: "20px",
+                right: "20px",
                 background: "rgba(11, 11, 13, 0.85)",
                 backdropFilter: "blur(8px)",
                 border: "1px solid rgba(255, 122, 0, 0.4)",
@@ -188,64 +189,62 @@ export default function StorySection({ onOpenBooking }) {
                 fontSize: "0.72rem",
                 fontWeight: "700",
                 padding: "0.3rem 0.75rem",
-                borderRadius: "var(--radius-pill)"
+                borderRadius: "var(--radius-pill)",
+                zIndex: 2
               }}
             >
-              Transformation Photo
+              Amit Verma
             </div>
 
-            {/* Image Placeholder Frame Container */}
+            {/* Profile Image Container */}
             <div
               style={{
                 width: "100%",
                 height: "100%",
-                minHeight: "320px",
+                minHeight: "340px",
+                maxHeight: "480px",
                 borderRadius: "16px",
+                overflow: "hidden",
+                position: "relative",
                 background: "#151517",
-                border: "2px dashed rgba(212, 175, 55, 0.35)",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                padding: "2rem",
-                position: "relative"
+                border: "1px solid rgba(212, 175, 55, 0.25)"
               }}
             >
+              <img
+                src={personalStory.image || "https://res.cloudinary.com/yutescy6/image/upload/v1790574109/amit_verma.png"}
+                alt="Amit Verma"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  objectPosition: "center top",
+                  display: "block"
+                }}
+              />
+
+              {/* Metric Badges Overlay at Bottom */}
               <div
                 style={{
-                  width: "70px",
-                  height: "70px",
-                  borderRadius: "50%",
-                  background: "rgba(255, 122, 0, 0.15)",
-                  border: "1px solid rgba(255, 122, 0, 0.4)",
+                  position: "absolute",
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  padding: "1.5rem 1rem 1rem",
+                  background: "linear-gradient(to top, rgba(11, 11, 13, 0.95) 0%, rgba(11, 11, 13, 0.7) 60%, transparent 100%)",
                   display: "flex",
-                  alignItems: "center",
                   justifyContent: "center",
-                  marginBottom: "1rem",
-                  color: "var(--accent-orange)"
+                  gap: "0.75rem"
                 }}
               >
-                <ImageIcon size={32} />
-              </div>
-
-              <h4 style={{ fontSize: "1.1rem", color: "#F5F5F5", marginBottom: "0.4rem" }}>
-                Amit Verma Photo Placeholder
-              </h4>
-
-              <p style={{ fontSize: "0.82rem", color: "var(--text-secondary)", maxWidth: "260px", lineHeight: "1.4", marginBottom: "1rem" }}>
-                Side-by-side photo (110kg Before → 80kg After) placeholder ready for client image upload.
-              </p>
-
-              {/* Metric Pill Badges */}
-              <div style={{ display: "flex", gap: "0.75rem" }}>
                 <span
                   style={{
-                    background: "rgba(255, 85, 85, 0.2)",
+                    background: "rgba(255, 85, 85, 0.25)",
+                    backdropFilter: "blur(6px)",
                     border: "1px solid #FF5555",
-                    color: "#FF5555",
+                    color: "#FF8888",
                     fontSize: "0.75rem",
                     fontWeight: "800",
-                    padding: "0.3rem 0.75rem",
+                    padding: "0.35rem 0.8rem",
                     borderRadius: "6px"
                   }}
                 >
@@ -253,12 +252,13 @@ export default function StorySection({ onOpenBooking }) {
                 </span>
                 <span
                   style={{
-                    background: "rgba(37, 211, 102, 0.2)",
+                    background: "rgba(37, 211, 102, 0.25)",
+                    backdropFilter: "blur(6px)",
                     border: "1px solid #25D366",
                     color: "#25D366",
                     fontSize: "0.75rem",
                     fontWeight: "800",
-                    padding: "0.3rem 0.75rem",
+                    padding: "0.35rem 0.8rem",
                     borderRadius: "6px"
                   }}
                 >

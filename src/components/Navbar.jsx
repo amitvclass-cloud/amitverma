@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { siteConfig } from "../data/site";
+import { navigateTo } from "../utils/navigation";
 import { Menu, X, ArrowRight } from "lucide-react";
 
 export default function Navbar({ onOpenBooking }) {
@@ -19,56 +20,20 @@ export default function Navbar({ onOpenBooking }) {
   }, []);
 
   const navLinks = [
-    { label: "My Story", href: "/my-story", isRoute: true },
-    { label: "Speaking (B2B)", href: "/speaking", isRoute: true },
-    { label: "1TO1", href: "/1to1", isRoute: true },
-    { label: "Results", href: "#results", isRoute: false },
+    { label: "My Story", href: "/my-story" },
+    { label: "Speaking (B2B)", href: "/speaking" },
+    { label: "1TO1", href: "/1to1" },
+    { label: "Results", href: "#results" },
   ];
 
   const handleNavClick = (e, link) => {
-    e.preventDefault();
     setMobileMenuOpen(false);
-
-    if (link.isRoute) {
-      window.history.pushState({}, "", link.href);
-      window.dispatchEvent(new Event("popstate"));
-      window.scrollTo(0, 0);
-    } else {
-      const currentPath = window.location.pathname;
-      if (currentPath !== "/") {
-        window.history.pushState({}, "", "/" + link.href);
-        window.dispatchEvent(new Event("popstate"));
-        setTimeout(() => {
-          const element = document.querySelector(link.href);
-          if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
-          }
-        }, 100);
-      } else {
-        const element = document.querySelector(link.href);
-        if (element) {
-          const offset = 80;
-          const bodyRect = document.body.getBoundingClientRect().top;
-          const elementRect = element.getBoundingClientRect().top;
-          const elementPosition = elementRect - bodyRect;
-          const offsetPosition = elementPosition - offset;
-
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth"
-          });
-        }
-      }
-    }
+    navigateTo(e, link.href);
   };
 
   const handleBrandClick = (e) => {
-    e.preventDefault();
-    if (window.location.pathname !== "/") {
-      window.history.pushState({}, "", "/");
-      window.dispatchEvent(new Event("popstate"));
-    }
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    setMobileMenuOpen(false);
+    navigateTo(e, "/");
   };
 
   return (

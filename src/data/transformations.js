@@ -2,16 +2,17 @@
 
 export const personalStory = {
   title: "Amit Verma's Personal 30kg Transformation Journey",
-  subtitle: "110kg → 80kg Without Gym | 21+ Yrs MNC Engineer to Group Manager",
+  subtitle: "110kg → 80kg Without Gym | 21+ Years Experience in Manufacturing Industries",
+  image: "https://res.cloudinary.com/yutescy6/image/upload/v1790574109/amit_verma.png",
   narrative: [
     "A 21-year manufacturing career and a 30kg personal reset built one practical system: disciplined habits that work in real life."
   ],
   highlights: [
     { label: "Career", value: "Engineer → Group Manager" },
-    { label: "Experience", value: "21+ years on the factory floor" },
+    { label: "Experience", value: "21+ Years Experience in Manufacturing Industries" },
     { label: "Result", value: "110kg → 80kg, without a gym" }
   ],
-  companies: ["Elin India", "FCC India", "Uno Minda", "Allied Nippon", "Uniparts Group", "Ratek Pheon"],
+  companies: ["Elin", "FCC", "Uno Minda", "Allied Nippon", "Uniparts Group", "Ratek Pheon"],
   companyDisclaimer: "Views and experiences shared are personal; company names mentioned for professional background only.",
   stats: {
     startWeight: "110 kg",

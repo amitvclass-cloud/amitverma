@@ -9,7 +9,7 @@ export const speakingData = {
   },
 
   stats: [
-    { value: "21+ Yrs", label: "MNC Execution Experience — Engineer to Group Manager" },
+    { value: "21+ Years", label: "Experience in Manufacturing Industries" },
     { value: "6", label: "Companies Across Manufacturing & Engineering" },
     { value: "50+", label: "Keynotes & Corporate Workshops Delivered" },
     { value: "30 kg", label: "Personal Transformation — Proof the Discipline Works" }

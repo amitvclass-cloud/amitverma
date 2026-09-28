@@ -59,7 +59,7 @@ export default function SpeakingPage({ onOpenBooking }) {
           </h1>
 
           <div className="speaking-hero-proof">
-            <span><CheckCircle2 size={15} /> 21+ years of MNC leadership</span>
+            <span><CheckCircle2 size={15} /> 21+ Years Experience in Manufacturing Industries</span>
             <span><CheckCircle2 size={15} /> Engineer → Group Manager</span>
             <span><CheckCircle2 size={15} /> Tested on real floors & teams</span>
           </div>

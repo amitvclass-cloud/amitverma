@@ -1,7 +1,7 @@
 import React from "react";
 import { siteConfig } from "../data/site";
-import { personalStory } from "../data/transformations";
 import { useSiteConfig, formatWhatsAppNumber } from "../hooks/useSiteConfig";
+import { navigateTo } from "../utils/navigation";
 import { MessageCircle, ArrowUp } from "lucide-react";
 
 export default function Footer() {
@@ -26,7 +26,17 @@ export default function Footer() {
         >
           {/* Brand Column */}
           <div>
-            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1rem" }}>
+            <a
+              href="/"
+              onClick={(e) => navigateTo(e, "/")}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "0.75rem",
+                marginBottom: "1rem",
+                textDecoration: "none"
+              }}
+            >
               <div
                 style={{
                   width: "38px",
@@ -46,7 +56,7 @@ export default function Footer() {
               <span style={{ fontFamily: "var(--font-heading)", fontWeight: "800", fontSize: "1.2rem", color: "#F5F5F5" }}>
                 AMIT VERMA
               </span>
-            </div>
+            </a>
 
             <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: "1.6", marginBottom: "1.25rem" }}>
               Motivational Speaker | Fitness & Life Transformation Coach. Ex-MNC Engineer (20+ Yrs), 110kg → 80kg transformation.
@@ -63,21 +73,67 @@ export default function Footer() {
             <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem", fontSize: "0.88rem" }}>
               <a
                 href="/my-story"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.history.pushState({}, "", "/my-story");
-                  window.dispatchEvent(new Event("popstate"));
-                  window.scrollTo(0, 0);
-                }}
-                style={{ color: "#A3A3A8", textDecoration: "none" }}
+                onClick={(e) => navigateTo(e, "/my-story")}
+                style={{ color: "#A3A3A8", textDecoration: "none", transition: "color 0.2s ease" }}
+                onMouseEnter={(e) => (e.target.style.color = "var(--accent-gold)")}
+                onMouseLeave={(e) => (e.target.style.color = "#A3A3A8")}
               >
                 My Story (110kg → 80kg)
               </a>
-              <a href="#what-i-do" style={{ color: "#A3A3A8", textDecoration: "none" }}>4 Core Pillars</a>
-              <a href="#programs" style={{ color: "#A3A3A8", textDecoration: "none" }}>Coaching Programs</a>
-              <a href="#speaking" style={{ color: "#A3A3A8", textDecoration: "none" }}>Motivational Speaking (B2B)</a>
-              <a href="#results" style={{ color: "#A3A3A8", textDecoration: "none" }}>Transformation Results</a>
-              <a href="#faq" style={{ color: "#A3A3A8", textDecoration: "none" }}>FAQ & DM Pre-Answers</a>
+              <a
+                href="/speaking"
+                onClick={(e) => navigateTo(e, "/speaking")}
+                style={{ color: "#A3A3A8", textDecoration: "none", transition: "color 0.2s ease" }}
+                onMouseEnter={(e) => (e.target.style.color = "var(--accent-gold)")}
+                onMouseLeave={(e) => (e.target.style.color = "#A3A3A8")}
+              >
+                Motivational Speaking (B2B Page)
+              </a>
+              <a
+                href="/1to1"
+                onClick={(e) => navigateTo(e, "/1to1")}
+                style={{ color: "#A3A3A8", textDecoration: "none", transition: "color 0.2s ease" }}
+                onMouseEnter={(e) => (e.target.style.color = "var(--accent-gold)")}
+                onMouseLeave={(e) => (e.target.style.color = "#A3A3A8")}
+              >
+                1-on-1 Mentorship Page
+              </a>
+              <a
+                href="#what-i-do"
+                onClick={(e) => navigateTo(e, "#what-i-do")}
+                style={{ color: "#A3A3A8", textDecoration: "none", transition: "color 0.2s ease" }}
+                onMouseEnter={(e) => (e.target.style.color = "var(--accent-gold)")}
+                onMouseLeave={(e) => (e.target.style.color = "#A3A3A8")}
+              >
+                4 Core Pillars
+              </a>
+              <a
+                href="#programs"
+                onClick={(e) => navigateTo(e, "#programs")}
+                style={{ color: "#A3A3A8", textDecoration: "none", transition: "color 0.2s ease" }}
+                onMouseEnter={(e) => (e.target.style.color = "var(--accent-gold)")}
+                onMouseLeave={(e) => (e.target.style.color = "#A3A3A8")}
+              >
+                Coaching Programs
+              </a>
+              <a
+                href="#results"
+                onClick={(e) => navigateTo(e, "#results")}
+                style={{ color: "#A3A3A8", textDecoration: "none", transition: "color 0.2s ease" }}
+                onMouseEnter={(e) => (e.target.style.color = "var(--accent-gold)")}
+                onMouseLeave={(e) => (e.target.style.color = "#A3A3A8")}
+              >
+                Transformation Results
+              </a>
+              <a
+                href="#faq"
+                onClick={(e) => navigateTo(e, "#faq")}
+                style={{ color: "#A3A3A8", textDecoration: "none", transition: "color 0.2s ease" }}
+                onMouseEnter={(e) => (e.target.style.color = "var(--accent-gold)")}
+                onMouseLeave={(e) => (e.target.style.color = "#A3A3A8")}
+              >
+                FAQ & DM Pre-Answers
+              </a>
             </div>
           </div>
 
@@ -147,16 +203,8 @@ export default function Footer() {
             </div>
 
             <div style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>
-              Instagram Handle: <strong style={{ color: "#F5F5F5" }}>@fitwithamitv</strong> (11.6K Followers)
+              Instagram Handle: <strong style={{ color: "#F5F5F5" }}>@fitwithamitv</strong> (12.9K Followers)
             </div>
-          </div>
-
-          {/* Legal & Medical Disclaimer */}
-          <div>
-            <h4 style={{ fontSize: "1rem", color: "#F5F5F5", marginBottom: "1rem" }}>Disclaimer</h4>
-            <p style={{ fontSize: "0.75rem", color: "var(--text-muted)", lineHeight: "1.5" }}>
-              Disclaimer: Results may vary based on individual consistency, metabolic state, and effort. Amit Verma provides life coaching and fitness guidance based on personal experience and habit engineering principles. Consult your physician before beginning any workout or diet regimen. {personalStory.companyDisclaimer}
-            </p>
           </div>
         </div>
 

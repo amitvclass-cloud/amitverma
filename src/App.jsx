@@ -40,12 +40,15 @@ export default function App() {
     if (window.location.pathname !== "/") {
       window.history.pushState({}, "", "/#book-now");
       setCurrentPath("/");
-      setTimeout(() => {
-        const element = document.querySelector("#book-now");
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
+      const scrollWhenReady = (attempts = 0) => {
+        const el = document.querySelector("#book-now");
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        } else if (attempts < 20) {
+          setTimeout(() => scrollWhenReady(attempts + 1), 100);
         }
-      }, 100);
+      };
+      scrollWhenReady();
     } else {
       const element = document.querySelector("#book-now");
       if (element) {
