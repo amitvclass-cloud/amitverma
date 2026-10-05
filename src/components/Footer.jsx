@@ -13,7 +13,7 @@ export default function Footer() {
   };
 
   return (
-    <footer style={{ background: "#060608", borderTop: "1px solid rgba(212, 175, 55, 0.2)", color: "#A3A3A8", paddingTop: "4rem", paddingBottom: "2rem" }}>
+    <footer style={{ background: "#061224", borderTop: "1px solid rgba(255, 255, 255, 0.12)", color: "#A0B2C6", paddingTop: "4rem", paddingBottom: "2rem" }}>
       <div className="container">
         
         <div

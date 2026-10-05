@@ -15,9 +15,9 @@ export default function StorySection({ onOpenBooking }) {
         
         {/* Section Header */}
         <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
-          <span className="section-tag">MY TRANSFORMATION STORY</span>
-          <h2 className="section-title">
-            From <span className="text-gradient">110kg MNC Engineer</span> to 80kg Life Transformation Coach
+          <span className="section-tag" style={{ color: "#A0B2C6" }}>MY TRANSFORMATION STORY</span>
+          <h2 className="section-title" style={{ color: "#FFFFFF" }}>
+            From 110kg MNC Engineer to 80kg Life Transformation Coach
           </h2>
           <p className="section-subtitle">
             I don't teach theory from textbooks. I teach the exact system I lived and tested while leading 60+ hour corporate workweeks.
@@ -102,8 +102,9 @@ export default function StorySection({ onOpenBooking }) {
               style={{
                 padding: "1.5rem 1.75rem",
                 borderRadius: "16px",
-                border: "1px solid rgba(255, 122, 0, 0.35)",
-                background: "linear-gradient(135deg, rgba(255, 122, 0, 0.1) 0%, rgba(21, 21, 23, 0.95) 100%)",
+                border: "1px solid rgba(255, 255, 255, 0.15)",
+                background: "#08182F",
+                boxShadow: "0 10px 30px rgba(0, 0, 0, 0.4)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
@@ -116,25 +117,24 @@ export default function StorySection({ onOpenBooking }) {
                     width: "52px",
                     height: "52px",
                     borderRadius: "50%",
-                    background: "var(--gradient-primary)",
-                    border: "2px solid #D4AF37",
+                    background: "rgba(18, 43, 77, 0.9)",
+                    border: "1px solid rgba(255, 255, 255, 0.2)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    color: "#0B0B0D",
-                    flexShrink: 0,
-                    boxShadow: "0 0 20px rgba(255, 122, 0, 0.4)"
+                    color: "#FFFFFF",
+                    flexShrink: 0
                   }}
                 >
-                  <UserCheck size={26} color="#0B0B0D" />
+                  <UserCheck size={26} color="#FFFFFF" />
                 </div>
 
                 <div>
                   <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", marginBottom: "0.15rem" }}>
-                    <h4 style={{ fontSize: "1.05rem", color: "#F5F5F5", margin: 0 }}>Real Person, Tested System</h4>
+                    <h4 style={{ fontSize: "1.05rem", color: "#FFFFFF", margin: 0 }}>Real Person, Tested System</h4>
                     <CheckCircle2 size={16} color="#25D366" />
                   </div>
-                  <p style={{ fontSize: "0.8rem", color: "var(--accent-gold)", margin: 0, fontWeight: "600" }}>
+                  <p style={{ fontSize: "0.8rem", color: "#A0B2C6", margin: 0, fontWeight: "500" }}>
                     110kg → 80kg • Ex-MNC Tech Leader & Coach
                   </p>
                 </div>
@@ -164,8 +164,9 @@ export default function StorySection({ onOpenBooking }) {
             style={{
               padding: "1rem",
               borderRadius: "24px",
-              border: "1px solid rgba(212, 175, 55, 0.4)",
-              boxShadow: "0 0 30px rgba(212, 175, 55, 0.15)",
+              border: "1px solid rgba(255, 255, 255, 0.15)",
+              background: "#08182F",
+              boxShadow: "0 15px 35px rgba(0, 0, 0, 0.5)",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
@@ -182,10 +183,10 @@ export default function StorySection({ onOpenBooking }) {
                 position: "absolute",
                 top: "20px",
                 right: "20px",
-                background: "rgba(11, 11, 13, 0.85)",
+                background: "rgba(11, 31, 58, 0.95)",
                 backdropFilter: "blur(8px)",
-                border: "1px solid rgba(255, 122, 0, 0.4)",
-                color: "var(--accent-orange)",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+                color: "#FFFFFF",
                 fontSize: "0.72rem",
                 fontWeight: "700",
                 padding: "0.3rem 0.75rem",
@@ -206,8 +207,8 @@ export default function StorySection({ onOpenBooking }) {
                 borderRadius: "16px",
                 overflow: "hidden",
                 position: "relative",
-                background: "#151517",
-                border: "1px solid rgba(212, 175, 55, 0.25)"
+                background: "#0B1F3A",
+                border: "1px solid rgba(255, 255, 255, 0.12)"
               }}
             >
               <img
@@ -230,7 +231,7 @@ export default function StorySection({ onOpenBooking }) {
                   left: 0,
                   right: 0,
                   padding: "1.5rem 1rem 1rem",
-                  background: "linear-gradient(to top, rgba(11, 11, 13, 0.95) 0%, rgba(11, 11, 13, 0.7) 60%, transparent 100%)",
+                  background: "linear-gradient(to top, rgba(11, 31, 58, 0.95) 0%, rgba(11, 31, 58, 0.6) 60%, transparent 100%)",
                   display: "flex",
                   justifyContent: "center",
                   gap: "0.75rem"

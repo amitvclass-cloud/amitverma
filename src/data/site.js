@@ -11,19 +11,19 @@ export const siteConfig = {
   whatsappMessage: "Hi Amit, I would like to inquire about your Coaching Programs & Motivational Speaking events.",
   
   bioStats: [
-    { label: "Weight Loss", value: "30 kg", desc: "110kg → 80kg without gym" },
-    { label: "Experience", value: "21+ Years", desc: "In Manufacturing Industries" },
-    { label: "Businesses Scaled", value: "500+", desc: "Mentored & Scaled" },
-    { label: "Instagram Family", value: "12.9K+", desc: "Engaged Community" },
+    { label: "Transformation", value: "30 kg Lost", desc: "110kg → 80kg without gym" },
+    { label: "MNC Experience", value: "20+ Years", desc: "Incl. 15+ Yrs Vendor Dev & Strategic Sourcing" },
+    { label: "Vendors Managed", value: "5000+", desc: "5000+ Managed & 500+ Developed" },
+    { label: "Transformations", value: "100+", desc: "Busy Professionals Coached" },
   ],
 
   hero: {
-    badge: "⚡ Radhe Radhe | 110kg → 80kg Transformation",
-    headline: "Engineered Body. Re-programmed Mind. Scaled Life.",
-    subheadline: "From a burnt-out 110kg MNC Engineer to a 80kg Fitness Coach & Motivational Speaker. I help professionals lose weight, eliminate fatigue, and build elite mental toughness.",
+    badge: "⚡ RADHE RADHE | 110KG → 80KG TRANSFORMATION",
+    headlineLine1: "Engineered Body.",
+    headlineLine2: "Re-programmed Mind.",
+    subheadline: "20+ Yrs MNC Experience, including 15+ Yrs Vendor Development & Strategic Sourcing. From a burnt-out 110kg MNC Engineer to a 80kg Fitness Coach & Motivational Speaker. I help professionals lose weight, build discipline, and scale their life.",
     primaryCta: "Book a Session",
     secondaryCta: "Explore Programs",
   }
-  // Webinar pricing/content lives in src/data/programs.js (webinarOffer) — single source of truth.
-  // Live batch date/seats/booking-status come from the Google Sheet via useSiteConfig().
 };
+

@@ -44,7 +44,7 @@ export default function B2BEnquiryModal({ onClose }) {
         left: 0,
         right: 0,
         bottom: 0,
-        background: "rgba(11, 11, 13, 0.92)",
+        background: "rgba(11, 31, 58, 0.95)",
         backdropFilter: "blur(20px)",
         WebkitBackdropFilter: "blur(20px)",
         zIndex: 2000,
@@ -63,8 +63,9 @@ export default function B2BEnquiryModal({ onClose }) {
           overflowY: "auto",
           padding: "2.25rem 2rem",
           position: "relative",
-          border: "2px solid #D4AF37",
-          boxShadow: "0 0 40px rgba(212, 175, 55, 0.25)",
+          background: "#08182F",
+          border: "1px solid rgba(255, 255, 255, 0.15)",
+          boxShadow: "0 15px 35px rgba(0, 0, 0, 0.5)",
           borderRadius: "20px"
         }}
       >

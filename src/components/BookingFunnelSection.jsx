@@ -91,14 +91,14 @@ export default function BookingFunnelSection({ selectedProgram, onSuccessPayment
   };
 
   return (
-    <section id="book-now" className="section-padding" style={{ position: "relative", background: "radial-gradient(circle at 50% 50%, rgba(255, 122, 0, 0.15) 0%, rgba(11, 11, 13, 1) 80%)" }}>
+    <section id="book-now" className="section-padding" style={{ position: "relative", background: "radial-gradient(circle at 50% 50%, #122B4D 0%, #0B1F3A 80%)" }}>
       <div className="container">
         
         {/* Section Header */}
         <div style={{ textAlign: "center", marginBottom: "3rem" }}>
-          <span className="section-tag">LIMITED SEATS BATCH</span>
-          <h2 className="section-title">
-            Book Your <span className="text-gradient">Transformation Pass</span>
+          <span className="section-tag" style={{ color: "#A0B2C6" }}>LIMITED SEATS BATCH</span>
+          <h2 className="section-title" style={{ color: "#FFFFFF" }}>
+            Book Your Transformation Pass
           </h2>
           <p className="section-subtitle">
             Secure your seat for the next live masterclass batch with Amit Verma. Single batch schedule for maximum focus and Q&A quality.
@@ -120,15 +120,16 @@ export default function BookingFunnelSection({ selectedProgram, onSuccessPayment
             className="glass-card"
             style={{
               padding: "2.25rem 1.75rem",
-              border: "2px solid #D4AF37",
-              boxShadow: "0 0 30px rgba(212, 175, 55, 0.2)"
+              background: "#08182F",
+              border: "1px solid rgba(255, 255, 255, 0.15)",
+              boxShadow: "0 15px 35px rgba(0, 0, 0, 0.5)"
             }}
           >
             {/* Urgency Counter Header */}
             <div
               style={{
-                background: "rgba(255, 122, 0, 0.15)",
-                border: "1px solid rgba(255, 122, 0, 0.4)",
+                background: "rgba(18, 43, 77, 0.9)",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
                 borderRadius: "12px",
                 padding: "1rem",
                 textAlign: "center",
@@ -142,24 +143,24 @@ export default function BookingFunnelSection({ selectedProgram, onSuccessPayment
               {/* Countdown Numbers */}
               <div style={{ display: "flex", justifyContent: "center", gap: "1rem" }}>
                 <div>
-                  <span style={{ fontSize: "1.8rem", fontWeight: "800", color: "#FFB800", fontFamily: "var(--font-heading)" }}>
+                  <span style={{ fontSize: "1.8rem", fontWeight: "800", color: "#FFFFFF", fontFamily: "var(--font-heading)" }}>
                     {String(timeLeft.hours).padStart(2, '0')}
                   </span>
-                  <div style={{ fontSize: "0.65rem", color: "#A3A3A8" }}>HOURS</div>
+                  <div style={{ fontSize: "0.65rem", color: "#A0B2C6" }}>HOURS</div>
                 </div>
-                <span style={{ fontSize: "1.5rem", color: "#D4AF37" }}>:</span>
+                <span style={{ fontSize: "1.5rem", color: "#A0B2C6" }}>:</span>
                 <div>
-                  <span style={{ fontSize: "1.8rem", fontWeight: "800", color: "#FFB800", fontFamily: "var(--font-heading)" }}>
+                  <span style={{ fontSize: "1.8rem", fontWeight: "800", color: "#FFFFFF", fontFamily: "var(--font-heading)" }}>
                     {String(timeLeft.minutes).padStart(2, '0')}
                   </span>
-                  <div style={{ fontSize: "0.65rem", color: "#A3A3A8" }}>MINS</div>
+                  <div style={{ fontSize: "0.65rem", color: "#A0B2C6" }}>MINS</div>
                 </div>
-                <span style={{ fontSize: "1.5rem", color: "#D4AF37" }}>:</span>
+                <span style={{ fontSize: "1.5rem", color: "#A0B2C6" }}>:</span>
                 <div>
-                  <span style={{ fontSize: "1.8rem", fontWeight: "800", color: "#FFB800", fontFamily: "var(--font-heading)" }}>
+                  <span style={{ fontSize: "1.8rem", fontWeight: "800", color: "#FFFFFF", fontFamily: "var(--font-heading)" }}>
                     {String(timeLeft.seconds).padStart(2, '0')}
                   </span>
-                  <div style={{ fontSize: "0.65rem", color: "#A3A3A8" }}>SECS</div>
+                  <div style={{ fontSize: "0.65rem", color: "#A0B2C6" }}>SECS</div>
                 </div>
               </div>
             </div>
@@ -168,7 +169,7 @@ export default function BookingFunnelSection({ selectedProgram, onSuccessPayment
               {activeItem.tag}
             </div>
 
-            <h3 style={{ fontSize: "1.5rem", color: "#F5F5F5", marginTop: "0.2rem", marginBottom: "0.5rem" }}>
+            <h3 style={{ fontSize: "1.5rem", color: "#FFFFFF", marginTop: "0.2rem", marginBottom: "0.5rem" }}>
               {activeItem.title}
             </h3>
 
@@ -182,16 +183,16 @@ export default function BookingFunnelSection({ selectedProgram, onSuccessPayment
                 display: "flex",
                 alignItems: "center",
                 gap: "0.75rem",
-                background: "rgba(255, 255, 255, 0.04)",
-                border: "1px solid rgba(255, 255, 255, 0.1)",
+                background: "rgba(11, 31, 58, 0.8)",
+                border: "1px solid rgba(255, 255, 255, 0.15)",
                 borderRadius: "10px",
                 padding: "0.85rem 1rem",
                 marginBottom: "1.5rem"
               }}
             >
-              <Clock size={20} color="var(--accent-gold)" />
+              <Clock size={20} color="#D4AF37" />
               <div>
-                <div style={{ fontSize: "0.85rem", fontWeight: "700", color: "#F5F5F5" }}>
+                <div style={{ fontSize: "0.85rem", fontWeight: "700", color: "#FFFFFF" }}>
                   {liveDate}
                 </div>
                 <div style={{ fontSize: "0.75rem", color: "var(--accent-orange)" }}>
@@ -202,23 +203,23 @@ export default function BookingFunnelSection({ selectedProgram, onSuccessPayment
 
             {/* Inclusions List */}
             <div style={{ display: "flex", flexDirection: "column", gap: "0.65rem", marginBottom: "2rem" }}>
-              <div style={{ fontSize: "0.8rem", fontWeight: "700", color: "#F5F5F5", textTransform: "uppercase" }}>
+              <div style={{ fontSize: "0.8rem", fontWeight: "700", color: "#FFFFFF", textTransform: "uppercase" }}>
                 Bonus Inclusions Included Free:
               </div>
               {activeItem.outcomes.map((bonus, bIdx) => (
                 <div key={bIdx} style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.83rem", color: "var(--text-secondary)" }}>
-                  <CheckCircle2 size={16} color="var(--accent-gold)" style={{ flexShrink: 0 }} />
+                  <CheckCircle2 size={16} color="#D4AF37" style={{ flexShrink: 0 }} />
                   <span>{bonus}</span>
                 </div>
               ))}
             </div>
 
             {/* Price Box */}
-            <div style={{ paddingTop: "1.25rem", borderTop: "1px solid rgba(255, 255, 255, 0.08)", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <div style={{ paddingTop: "1.25rem", borderTop: "1px solid rgba(255, 255, 255, 0.12)", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
               <div>
-                <div style={{ fontSize: "0.75rem", color: "#A3A3A8" }}>Total Investment</div>
+                <div style={{ fontSize: "0.75rem", color: "#A0B2C6" }}>Total Investment</div>
                 <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem" }}>
-                  <span style={{ fontSize: "2rem", fontWeight: "800", color: "#FFB800", fontFamily: "var(--font-heading)" }}>
+                  <span style={{ fontSize: "2rem", fontWeight: "800", color: "#FFFFFF", fontFamily: "var(--font-heading)" }}>
                     {activeItem.price}
                   </span>
                   {activeItem.originalPrice && (
@@ -242,7 +243,10 @@ export default function BookingFunnelSection({ selectedProgram, onSuccessPayment
           <div
             className="glass-card"
             style={{
-              padding: "2.25rem 1.75rem"
+              padding: "2.25rem 1.75rem",
+              background: "#08182F",
+              border: "1px solid rgba(255, 255, 255, 0.15)",
+              boxShadow: "0 15px 35px rgba(0, 0, 0, 0.5)"
             }}
           >
             {!isBookingOpen ? (
@@ -340,9 +344,9 @@ export default function BookingFunnelSection({ selectedProgram, onSuccessPayment
                       width: "100%",
                       padding: "0.85rem 1rem",
                       borderRadius: "10px",
-                      background: "rgba(255, 255, 255, 0.04)",
-                      border: "1px solid rgba(255, 255, 255, 0.15)",
-                      color: "#F5F5F5",
+                      background: "rgba(11, 31, 58, 0.8)",
+                      border: "1px solid rgba(255, 255, 255, 0.2)",
+                      color: "#FFFFFF",
                       fontSize: "0.95rem",
                       outline: "none"
                     }}
@@ -350,7 +354,7 @@ export default function BookingFunnelSection({ selectedProgram, onSuccessPayment
                 </div>
 
                 <div style={{ marginBottom: "1.25rem" }}>
-                  <label style={{ display: "block", fontSize: "0.85rem", color: "#F5F5F5", fontWeight: "600", marginBottom: "0.4rem" }}>
+                  <label style={{ display: "block", fontSize: "0.85rem", color: "#FFFFFF", fontWeight: "600", marginBottom: "0.4rem" }}>
                     Email Address * (For Zoom Pass)
                   </label>
                   <input
@@ -364,9 +368,9 @@ export default function BookingFunnelSection({ selectedProgram, onSuccessPayment
                       width: "100%",
                       padding: "0.85rem 1rem",
                       borderRadius: "10px",
-                      background: "rgba(255, 255, 255, 0.04)",
-                      border: "1px solid rgba(255, 255, 255, 0.15)",
-                      color: "#F5F5F5",
+                      background: "rgba(11, 31, 58, 0.8)",
+                      border: "1px solid rgba(255, 255, 255, 0.2)",
+                      color: "#FFFFFF",
                       fontSize: "0.95rem",
                       outline: "none"
                     }}
@@ -374,7 +378,7 @@ export default function BookingFunnelSection({ selectedProgram, onSuccessPayment
                 </div>
 
                 <div style={{ marginBottom: "1.75rem" }}>
-                  <label style={{ display: "block", fontSize: "0.85rem", color: "#F5F5F5", fontWeight: "600", marginBottom: "0.4rem" }}>
+                  <label style={{ display: "block", fontSize: "0.85rem", color: "#FFFFFF", fontWeight: "600", marginBottom: "0.4rem" }}>
                     WhatsApp Mobile Number *
                   </label>
                   <input
@@ -388,9 +392,9 @@ export default function BookingFunnelSection({ selectedProgram, onSuccessPayment
                       width: "100%",
                       padding: "0.85rem 1rem",
                       borderRadius: "10px",
-                      background: "rgba(255, 255, 255, 0.04)",
-                      border: "1px solid rgba(255, 255, 255, 0.15)",
-                      color: "#F5F5F5",
+                      background: "rgba(11, 31, 58, 0.8)",
+                      border: "1px solid rgba(255, 255, 255, 0.2)",
+                      color: "#FFFFFF",
                       fontSize: "0.95rem",
                       outline: "none"
                     }}

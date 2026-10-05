@@ -23,7 +23,7 @@ export default function HeroSection({ onOpenBooking }) {
         justifyContent: "center",
         paddingTop: "90px",
         paddingBottom: "40px",
-        background: "radial-gradient(circle at 50% 20%, rgba(255, 122, 0, 0.12) 0%, rgba(11, 11, 13, 1) 70%)",
+        background: "radial-gradient(circle at 50% 20%, #122B4D 0%, #0B1F3A 80%)",
         overflow: "hidden"
       }}
     >
@@ -36,7 +36,7 @@ export default function HeroSection({ onOpenBooking }) {
           width: "450px",
           height: "450px",
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%)",
           pointerEvents: "none",
           filter: "blur(40px)"
         }}
@@ -50,8 +50,9 @@ export default function HeroSection({ onOpenBooking }) {
           style={{
             marginBottom: "24px",
             display: "inline-flex",
-            background: "rgba(255, 122, 0, 0.15)",
-            border: "1px solid rgba(255, 122, 0, 0.4)",
+            background: "rgba(18, 43, 77, 0.9)",
+            border: "1px solid rgba(255, 255, 255, 0.2)",
+            color: "#FFFFFF",
             padding: "0.5rem 1.25rem"
           }}
         >
@@ -67,11 +68,12 @@ export default function HeroSection({ onOpenBooking }) {
             lineHeight: "1.1",
             letterSpacing: "-0.02em",
             margin: "0 auto",
-            maxWidth: "900px"
+            maxWidth: "900px",
+            color: "#FFFFFF"
           }}
         >
-          <span style={{ display: "block" }}>Engineered Body.</span>
-          <span className="text-gradient" style={{ display: "block" }}>Re-programmed Mind.</span>
+          <span style={{ display: "block", color: "#FFFFFF" }}>Engineered Body.</span>
+          <span className="text-orange" style={{ display: "block" }}>Re-programmed Mind.</span>
         </h1>
 
         {/* Video Placeholder — Centered, YouTube 16:9 Format */}
@@ -84,19 +86,19 @@ export default function HeroSection({ onOpenBooking }) {
               top: "-18px",
               left: "-18px",
               zIndex: 10,
-              background: "rgba(15, 15, 18, 0.98)",
-              border: "1px solid #D4AF37",
+              background: "#08182F",
+              border: "1px solid rgba(212, 175, 55, 0.4)",
               borderRadius: "12px",
               padding: "0.6rem 1.1rem",
               display: "flex",
               alignItems: "center",
               gap: "0.6rem",
-              boxShadow: "0 10px 25px rgba(0,0,0,0.7)",
+              boxShadow: "0 10px 25px rgba(0,0,0,0.6)",
               whiteSpace: "nowrap"
             }}
           >
             <Award size={18} color="#D4AF37" />
-            <span style={{ fontSize: "0.82rem", fontWeight: "700", color: "#F5F5F5" }}>20+ Yrs MNC Exp</span>
+            <span style={{ fontSize: "0.82rem", fontWeight: "700", color: "#FFFFFF" }}>20+ Yrs MNC Exp</span>
           </div>
 
           {/* Floating Bottom-Right Badge Pill */}
@@ -106,19 +108,19 @@ export default function HeroSection({ onOpenBooking }) {
               bottom: "-18px",
               right: "-18px",
               zIndex: 10,
-              background: "rgba(15, 15, 18, 0.98)",
-              border: "1px solid #FF7A00",
+              background: "#08182F",
+              border: "1px solid rgba(255, 138, 31, 0.4)",
               borderRadius: "12px",
               padding: "0.6rem 1.1rem",
               display: "flex",
               alignItems: "center",
               gap: "0.6rem",
-              boxShadow: "0 10px 25px rgba(0,0,0,0.7)",
+              boxShadow: "0 10px 25px rgba(0,0,0,0.6)",
               whiteSpace: "nowrap"
             }}
           >
-            <Users size={18} color="#FF7A00" />
-            <span style={{ fontSize: "0.82rem", fontWeight: "700", color: "#F5F5F5" }}>500+ Businesses Scaled</span>
+            <Users size={18} color="var(--accent-orange)" />
+            <span style={{ fontSize: "0.82rem", fontWeight: "700", color: "#FFFFFF" }}>5000+ Vendors Managed</span>
           </div>
 
           {/* Video Placeholder Frame (Ratio 16:9 — YouTube format) */}
@@ -128,9 +130,9 @@ export default function HeroSection({ onOpenBooking }) {
               width: "100%",
               aspectRatio: "16/9",
               borderRadius: "24px",
-              background: "#151517",
-              border: "1px solid rgba(255, 122, 0, 0.4)",
-              boxShadow: "0 0 35px rgba(255, 122, 0, 0.15), 0 20px 40px rgba(0, 0, 0, 0.8)",
+              background: "#091B33",
+              border: "1px solid rgba(255, 255, 255, 0.15)",
+              boxShadow: "0 15px 35px rgba(0, 0, 0, 0.5)",
               position: "relative",
               overflow: "hidden",
               display: "flex",
@@ -165,7 +167,7 @@ export default function HeroSection({ onOpenBooking }) {
                 width: "160px",
                 height: "160px",
                 borderRadius: "50%",
-                background: "radial-gradient(circle, rgba(255, 122, 0, 0.25) 0%, transparent 70%)",
+                background: "radial-gradient(circle, rgba(255, 138, 31, 0.2) 0%, transparent 70%)",
                 pointerEvents: "none",
                 filter: "blur(20px)"
               }}
@@ -191,21 +193,21 @@ export default function HeroSection({ onOpenBooking }) {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  boxShadow: "0 0 35px rgba(255, 122, 0, 0.8)",
-                  border: "3px solid #D4AF37",
+                  boxShadow: "0 0 25px rgba(255, 138, 31, 0.6)",
+                  border: "2px solid #FFFFFF",
                   transition: "transform 0.3s ease, box-shadow 0.3s ease"
                 }}
               >
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="#0B0B0D" xmlns="http://www.w3.org/2000/svg" style={{ marginLeft: "4px" }}>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="#0B1F3A" xmlns="http://www.w3.org/2000/svg" style={{ marginLeft: "4px" }}>
                   <polygon points="5 3 19 12 5 21 5 3" />
                 </svg>
               </div>
 
               <div style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "0.9rem", fontWeight: "700", color: "#F5F5F5", letterSpacing: "0.02em", display: "block" }}>
+                <span style={{ fontSize: "0.9rem", fontWeight: "700", color: "#FFFFFF", letterSpacing: "0.02em", display: "block" }}>
                   Watch Amit's Story
                 </span>
-                <span style={{ fontSize: "0.75rem", color: "var(--accent-gold)", fontWeight: "500" }}>
+                <span style={{ fontSize: "0.75rem", color: "#A0B2C6", fontWeight: "500" }}>
                   110kg → 80kg Transformation
                 </span>
               </div>
@@ -216,10 +218,10 @@ export default function HeroSection({ onOpenBooking }) {
                 position: "absolute",
                 top: "14px",
                 right: "14px",
-                background: "rgba(11, 11, 13, 0.85)",
+                background: "rgba(11, 31, 58, 0.85)",
                 backdropFilter: "blur(8px)",
-                border: "1px solid rgba(255, 122, 0, 0.4)",
-                color: "var(--accent-orange)",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+                color: "#FFFFFF",
                 fontSize: "0.72rem",
                 fontWeight: "700",
                 padding: "0.3rem 0.75rem",
@@ -237,7 +239,7 @@ export default function HeroSection({ onOpenBooking }) {
         <div
           className="font-accent"
           style={{
-            color: "var(--accent-gold)",
+            color: "#FFFFFF",
             fontWeight: "600",
             fontSize: "clamp(1.8rem, 3.8vw, 3rem)",
             marginTop: "2.5rem",
@@ -255,12 +257,12 @@ export default function HeroSection({ onOpenBooking }) {
             lineHeight: "1.6",
             marginTop: "20px",
             marginBottom: "32px",
-            maxWidth: "620px",
+            maxWidth: "680px",
             marginLeft: "auto",
             marginRight: "auto"
           }}
         >
-          {siteConfig.hero.subheadline}
+          From a burnt-out 110kg MNC Engineer to a 80kg Fitness Coach & Motivational Speaker. I help professionals lose weight, build discipline, and create a life they love.
         </p>
 
         {/* CTAs */}
@@ -300,7 +302,9 @@ export default function HeroSection({ onOpenBooking }) {
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
             gap: "2rem",
-            textAlign: "center"
+            textAlign: "center",
+            background: "#08182F",
+            border: "1px solid rgba(255, 255, 255, 0.12)"
           }}
         >
           {siteConfig.bioStats.map((stat, idx) => (
@@ -310,16 +314,14 @@ export default function HeroSection({ onOpenBooking }) {
                   fontFamily: "var(--font-heading)",
                   fontSize: "var(--fz-xl)",
                   fontWeight: "800",
-                  background: "var(--gradient-primary)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
+                  color: "#FFFFFF",
                   lineHeight: "1.1",
                   marginBottom: "0.3rem"
                 }}
               >
                 {stat.value}
               </div>
-              <div style={{ fontWeight: "700", fontSize: "0.9rem", color: "#F5F5F5", marginBottom: "0.2rem" }}>
+              <div style={{ fontWeight: "700", fontSize: "0.9rem", color: "#FFFFFF", marginBottom: "0.2rem" }}>
                 {stat.label}
               </div>
               <div style={{ fontSize: "0.75rem", color: "var(--text-secondary)" }}>

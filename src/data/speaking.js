@@ -3,16 +3,20 @@
 export const speakingData = {
   header: {
     tag: "Corporate Training & Consulting",
-    title: "21+ Years on the Factory Floor. Real Results in the Boardroom.",
-    subtitle: "Practical corporate training shaped by 21+ years of real manufacturing leadership — never textbook theory.",
-    proofPoints: ["Factory-floor tested", "Vendor-negotiation proven", "Built for real teams"],
+    title: "20+ Years MNC Experience. Real Results in the Boardroom.",
+    subtitle: "Practical corporate training shaped by 20+ years of MNC manufacturing & sourcing leadership — including 15+ years of Vendor Development & Strategic Sourcing.",
+    proofPoints: [
+      "20+ Yrs MNC Experience",
+      "15+ Yrs Vendor Dev & Strategic Sourcing",
+      "5000+ Vendors Managed / 500+ Developed"
+    ],
   },
 
   stats: [
-    { value: "21+ Years", label: "Experience in Manufacturing Industries" },
-    { value: "6", label: "Companies Across Manufacturing & Engineering" },
-    { value: "50+", label: "Keynotes & Corporate Workshops Delivered" },
-    { value: "30 kg", label: "Personal Transformation — Proof the Discipline Works" }
+    { value: "20+ Years", label: "MNC Experience (Incl. 15+ Yrs Vendor Dev & Sourcing)" },
+    { value: "5000+", label: "Vendors Managed Across Corporate Career" },
+    { value: "500+", label: "Vendors Developed & Optimized" },
+    { value: "30 kg", label: "Personal Transformation — Living Proof of Discipline" }
   ],
 
   topics: [

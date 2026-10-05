@@ -28,7 +28,7 @@ export default function SpeakingPage({ onOpenBooking }) {
           position: "relative",
           paddingTop: "140px",
           paddingBottom: "60px",
-          background: "radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.15) 0%, rgba(11, 11, 13, 1) 75%)",
+          background: "radial-gradient(circle at 50% 20%, #122B4D 0%, #0B1F3A 80%)",
           textAlign: "center"
         }}
       >
@@ -38,11 +38,12 @@ export default function SpeakingPage({ onOpenBooking }) {
             style={{
               marginBottom: "20px",
               display: "inline-flex",
-              background: "rgba(212, 175, 55, 0.15)",
-              border: "1px solid #D4AF37"
+              background: "rgba(18, 43, 77, 0.9)",
+              border: "1px solid rgba(255, 255, 255, 0.2)",
+              color: "#FFFFFF"
             }}
           >
-            <Building2 size={16} color="var(--accent-gold)" />
+            <Building2 size={16} color="#D4AF37" />
             <span>CORPORATE TRAINING & CONSULTING</span>
           </div>
 

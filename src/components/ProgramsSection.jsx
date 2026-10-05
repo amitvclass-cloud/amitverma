@@ -12,8 +12,8 @@ export default function ProgramsSection({ onOpenBooking }) {
         {/* Section Header */}
         <div style={{ textAlign: "center", marginBottom: "3rem" }}>
           <span className="section-tag">LIVE WEBINAR</span>
-          <h2 className="section-title">
-            Join the <span className="text-gradient">Live Weight Loss Webinar</span>
+          <h2 className="section-title" style={{ color: "#FFFFFF" }}>
+            Join the Live Weight Loss Webinar
           </h2>
           <p className="section-subtitle">
             One live session, one fixed date — learn the exact no-gym system for busy professionals.
@@ -28,10 +28,10 @@ export default function ProgramsSection({ onOpenBooking }) {
             margin: "0 auto",
             padding: "2.5rem 2rem",
             borderRadius: "24px",
-            border: "2px solid #D4AF37",
-            boxShadow: "0 0 45px rgba(212, 175, 55, 0.2), 0 20px 40px rgba(0, 0, 0, 0.6)",
+            border: "1px solid rgba(255, 255, 255, 0.15)",
+            boxShadow: "0 15px 35px rgba(0, 0, 0, 0.5)",
             position: "relative",
-            background: "linear-gradient(145deg, rgba(212, 175, 55, 0.08) 0%, rgba(21, 21, 23, 0.98) 100%)"
+            background: "#08182F"
           }}
         >
           {/* Top Badge Overlay */}

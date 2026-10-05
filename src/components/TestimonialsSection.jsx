@@ -21,8 +21,8 @@ export default function TestimonialsSection() {
         {/* Section Header */}
         <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
           <span className="section-tag">VOICES OF TRUST</span>
-          <h2 className="section-title">
-            What Our <span className="text-gradient">Clients Say</span>
+          <h2 className="section-title" style={{ color: "#FFFFFF" }}>
+            What Our Clients Say
           </h2>
           <p className="section-subtitle">
             Authentic video reel transformations from corporate executives, business owners, and masterclass attendees.

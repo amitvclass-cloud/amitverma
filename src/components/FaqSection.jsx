@@ -21,8 +21,8 @@ export default function FaqSection() {
         {/* Section Header */}
         <div style={{ textAlign: "center", marginBottom: "3rem" }}>
           <span className="section-tag">GOT QUESTIONS?</span>
-          <h2 className="section-title">
-            Frequently Asked <span className="text-gradient">Questions</span>
+          <h2 className="section-title" style={{ color: "#FFFFFF" }}>
+            Frequently Asked Questions
           </h2>
           <p className="section-subtitle">
             Pre-answering common DM questions regarding pricing, format, online/offline sessions, and coaching expectations.

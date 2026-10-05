@@ -16,13 +16,13 @@ export default function MyStoryPage({ onOpenBooking }) {
           position: "relative",
           paddingTop: "140px",
           paddingBottom: "50px",
-          background: "radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.15) 0%, rgba(11, 11, 13, 1) 75%)",
+          background: "radial-gradient(circle at 50% 20%, #122B4D 0%, #0B1F3A 80%)",
           textAlign: "center"
         }}
       >
         <div className="container">
-          <span className="section-tag">MY COMPLETE JOURNEY</span>
-          <h1 className="section-title" style={{ maxWidth: "800px", margin: "0 auto 1rem" }}>
+          <span className="section-tag" style={{ color: "#A0B2C6" }}>MY COMPLETE JOURNEY</span>
+          <h1 className="section-title" style={{ maxWidth: "800px", margin: "0 auto 1rem", color: "#FFFFFF" }}>
             {personalStory.subtitle}
           </h1>
           <p className="section-subtitle" style={{ maxWidth: "680px", margin: "0 auto" }}>{personalStory.narrative[0]}</p>

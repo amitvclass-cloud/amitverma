@@ -32,8 +32,8 @@ export default function WhatIDoSection({ onOpenBooking }) {
         {/* Section Header */}
         <div style={{ textAlign: "center", marginBottom: "3rem" }}>
           <span className="section-tag">CORE PILLARS</span>
-          <h2 className="section-title">
-            What I <span className="text-gradient">Do</span>
+          <h2 className="section-title" style={{ color: "#FFFFFF" }}>
+            What I Do
           </h2>
         </div>
 
@@ -50,7 +50,9 @@ export default function WhatIDoSection({ onOpenBooking }) {
                   textAlign: "center",
                   display: "flex",
                   flexDirection: "column",
-                  alignItems: "center"
+                  alignItems: "center",
+                  background: "#08182F",
+                  border: "1px solid rgba(255, 255, 255, 0.15)"
                 }}
               >
                 <div
@@ -58,19 +60,18 @@ export default function WhatIDoSection({ onOpenBooking }) {
                     width: "54px",
                     height: "54px",
                     borderRadius: "16px",
-                    background: "linear-gradient(135deg, rgba(255, 122, 0, 0.2) 0%, rgba(212, 175, 55, 0.2) 100%)",
-                    border: "1px solid rgba(212, 175, 55, 0.4)",
+                    background: "rgba(18, 43, 77, 0.9)",
+                    border: "1px solid rgba(255, 255, 255, 0.2)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    marginBottom: "1rem",
-                    boxShadow: "0 0 20px rgba(255, 122, 0, 0.2)"
+                    marginBottom: "1rem"
                   }}
                 >
-                  <IconComp size={26} color="var(--accent-orange)" />
+                  <IconComp size={26} color="#FFFFFF" />
                 </div>
 
-                <h3 style={{ fontSize: "1.1rem", color: "#F5F5F5", marginBottom: "0.5rem" }}>
+                <h3 style={{ fontSize: "1.1rem", color: "#FFFFFF", marginBottom: "0.5rem" }}>
                   {pillar.title}
                 </h3>
 

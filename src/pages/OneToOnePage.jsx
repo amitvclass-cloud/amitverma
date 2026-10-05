@@ -47,7 +47,7 @@ export default function OneToOnePage({ onOpenBooking }) {
           position: "relative",
           paddingTop: "140px",
           paddingBottom: "60px",
-          background: "radial-gradient(circle at 50% 20%, rgba(255, 122, 0, 0.15) 0%, rgba(11, 11, 13, 1) 75%)",
+          background: "radial-gradient(circle at 50% 20%, #122B4D 0%, #0B1F3A 80%)",
           textAlign: "center"
         }}
       >
@@ -57,8 +57,9 @@ export default function OneToOnePage({ onOpenBooking }) {
             style={{
               marginBottom: "20px",
               display: "inline-flex",
-              background: "rgba(255, 122, 0, 0.15)",
-              border: "1px solid rgba(255, 122, 0, 0.4)"
+              background: "rgba(18, 43, 77, 0.9)",
+              border: "1px solid rgba(255, 255, 255, 0.2)",
+              color: "#FFFFFF"
             }}
           >
             <UserCheck size={16} color="var(--accent-orange)" />

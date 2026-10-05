@@ -10,8 +10,8 @@ export default function TransformationsSection({ onOpenBooking }) {
         {/* Section Header */}
         <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
           <span className="section-tag">PROVEN CLIENT RESULTS</span>
-          <h2 className="section-title">
-            Real Transformations, <span className="text-gradient">Real Metrics</span>
+          <h2 className="section-title" style={{ color: "#FFFFFF" }}>
+            Real Transformations, Real Metrics
           </h2>
           <p className="section-subtitle">
             See how corporate leaders, founders, and engineers shed weight, gained energy, and reprogrammed their lives using Amit's blueprint.

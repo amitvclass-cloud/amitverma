@@ -46,11 +46,11 @@ export default function Navbar({ onOpenBooking }) {
         zIndex: 1000,
         transition: "all 0.3s ease",
         background: scrolled
-          ? "rgba(11, 11, 13, 0.88)"
+          ? "rgba(11, 31, 58, 0.95)"
           : "transparent",
         backdropFilter: scrolled ? "blur(16px)" : "none",
         WebkitBackdropFilter: scrolled ? "blur(16px)" : "none",
-        borderBottom: scrolled ? "1px solid rgba(212, 175, 55, 0.2)" : "1px solid transparent",
+        borderBottom: scrolled ? "1px solid rgba(255, 255, 255, 0.12)" : "1px solid transparent",
         padding: scrolled ? "0.75rem 0" : "1.25rem 0",
       }}
     >
@@ -110,14 +110,14 @@ export default function Navbar({ onOpenBooking }) {
               href={link.href}
               onClick={(e) => handleNavClick(e, link)}
               style={{
-                color: "#A3A3A8",
+                color: "#FFFFFF",
                 textDecoration: "none",
                 fontSize: "0.9rem",
                 fontWeight: "500",
                 transition: "color 0.2s ease"
               }}
-              onMouseEnter={(e) => (e.target.style.color = "var(--accent-gold)")}
-              onMouseLeave={(e) => (e.target.style.color = "#A3A3A8")}
+              onMouseEnter={(e) => (e.target.style.color = "var(--accent-orange)")}
+              onMouseLeave={(e) => (e.target.style.color = "#FFFFFF")}
             >
               {link.label}
             </a>

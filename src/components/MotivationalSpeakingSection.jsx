@@ -20,15 +20,17 @@ export default function MotivationalSpeakingSection({ onOpenB2BModal }) {
         {/* Section Header */}
         <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
           <span className="section-tag">{speakingData.header.tag}</span>
-          <h2 className="section-title">
-            Corporate Training & <span className="text-gradient">Consulting</span>
+          <h2 className="section-title" style={{ color: "#FFFFFF" }}>
+            Corporate Training & Consulting
           </h2>
           <p className="section-subtitle">
             {speakingData.header.subtitle}
           </p>
           <div className="b2b-proof-points">
             {speakingData.header.proofPoints.map((point) => (
-              <span key={point}><CheckCircle2 size={14} /> {point}</span>
+              <span key={point} style={{ background: "rgba(18, 43, 77, 0.8)", border: "1px solid rgba(255, 255, 255, 0.15)", color: "#FFFFFF" }}>
+                <CheckCircle2 size={14} color="#D4AF37" /> {point}
+              </span>
             ))}
           </div>
         </div>
@@ -42,12 +44,14 @@ export default function MotivationalSpeakingSection({ onOpenB2BModal }) {
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
             gap: "1.5rem",
-            textAlign: "center"
+            textAlign: "center",
+            background: "#08182F",
+            border: "1px solid rgba(255, 255, 255, 0.12)"
           }}
         >
           {speakingData.stats.map((st, sIdx) => (
             <div key={sIdx}>
-              <div style={{ fontSize: "1.8rem", fontWeight: "800", color: "#FFB800", fontFamily: "var(--font-heading)" }}>
+              <div style={{ fontSize: "1.8rem", fontWeight: "800", color: "#FFFFFF", fontFamily: "var(--font-heading)" }}>
                 {st.value}
               </div>
               <div style={{ fontSize: "0.85rem", color: "var(--text-secondary)", marginTop: "0.2rem" }}>

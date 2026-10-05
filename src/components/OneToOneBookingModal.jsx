@@ -34,7 +34,7 @@ export default function OneToOneBookingModal({ program, onClose }) {
     <div
       style={{
         position: "fixed", top: 0, left: 0, right: 0, bottom: 0,
-        background: "rgba(11, 11, 13, 0.92)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)",
+        background: "rgba(11, 31, 58, 0.95)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)",
         zIndex: 2000, display: "flex", alignItems: "center", justifyContent: "center", padding: "1.5rem"
       }}
     >
@@ -42,8 +42,8 @@ export default function OneToOneBookingModal({ program, onClose }) {
         className="glass-card"
         style={{
           width: "100%", maxWidth: "520px", maxHeight: "90vh", overflowY: "auto",
-          padding: "2.25rem 2rem", position: "relative", border: "2px solid #D4AF37",
-          boxShadow: "0 0 40px rgba(212, 175, 55, 0.25)", borderRadius: "20px"
+          padding: "2.25rem 2rem", position: "relative", background: "#08182F", border: "1px solid rgba(255, 255, 255, 0.15)",
+          boxShadow: "0 15px 35px rgba(0, 0, 0, 0.5)", borderRadius: "20px"
         }}
       >
         <button
